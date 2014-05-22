@@ -54,7 +54,7 @@ public class App {
         }
 
         public int cmp(String[] a, String[] b, int column) {
-            return a[column].compareTo(b[column]);
+            return a[column].compareToIgnoreCase(b[column]);
         }
     };
 }
