@@ -29,11 +29,11 @@ public class HtmlWriter {
                 .with("EMAIL", email);
         System.out.println(vc.toString());
 
-        vc.writeQRCode(new File(dir,"qr"+iota+".png"));
+        vc.writeQRCode(new File(dir,String.format("qr%04d.png",iota)));
 
         out.printf(
                 "<div class='badge'>\n" +
-                "    <img class='qrcode' src='qr%d.png'>\n" +
+                "    <img class='qrcode' src='qr%04d.png'>\n" +
                 "    <div class='firstName'>%s</div>\n" +
                 "    <div class='lastName'>%s</div>\n" +
                 "    <div class='company'>%s</div>\n" +
