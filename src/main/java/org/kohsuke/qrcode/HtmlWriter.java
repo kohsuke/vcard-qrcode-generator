@@ -34,6 +34,7 @@ public class HtmlWriter {
         out.printf(
                 "<div class='badge'>\n" +
                 "    <img class='qrcode' src='qr%04d.png'>\n" +
+                "    <div class='cblogo'></div>\n"+
                 "    <div class='firstName'>%s</div>\n" +
                 "    <div class='lastName'>%s</div>\n" +
                 "    <div class='company'>%s</div>\n" +
