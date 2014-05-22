@@ -21,11 +21,11 @@ public class HtmlWriter {
         out.println(IOUtils.toString(HtmlWriter.class.getResourceAsStream("/badges.html")));
     }
 
-    public void add(String firstName, String lastName, String company, String email) throws IOException, WriterException {
+    public void add(String firstName, String lastName, String company, String email, String tel) throws IOException, WriterException {
         VCardBuilder vc = new VCardBuilder();
         vc.with("N",firstName+" "+lastName)
                 .with("ORG", company)
-//                .with("TEL","012-345-6789")
+                .with("TEL", tel)
                 .with("EMAIL", email);
         System.out.println(vc.toString());
 
